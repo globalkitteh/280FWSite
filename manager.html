@@ -7,28 +7,6 @@
 
     <title>F&W Manager Portal</title>
 
-    <script>
-        String.prototype.hashCode = function () { // hash function I pulled from the URL below
-            var hash = 0;
-            if (this.length == 0) return hash;
-            for (i = 0; i < this.length; i++) {
-                char = this.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash; // Convert to 32bit integer
-            }
-            return hash;
-        }
-
-        //https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
-
-        function getInputValue() {
-            // Selecting the input element and get its value 
-            let inputVal = (document.getElementById("inputId").value.hashCode());
-            inputVal = inputVal / 10000;
-            // Displaying the value, removing decimals, adding 2 decimals, and taking the absolute value
-            alert("$" + Math.abs(parseInt(inputVal) / 100));
-        }
-    </script>
 </head>
 <div class="w3-bar" id="myNavbar">
     <a href="./index.html">HOME</a>
@@ -42,12 +20,48 @@
 <body>
     <div class="actionItem">
         <p>Check Customer Outstanding Balance:</p>
-        <label for="inputOwed">Customer ID:</label>
-        <input type="text" id="inputOwed">
-        <button type="button" onclick="getInputValue();">Get Value Owed</button> <!-- button that runs getInputValue-->
-        
+        <label for="custIDOwed">Customer ID:</label>
+        <input type="text" id="custIDOwed">
+        <p id="owedOut"></p>
+        <button type="button" onclick="getValueOwed();">Get Value Owed</button> <!-- button that runs getInputValue-->
+    </div>
+    <div class="actionItem">
+        <p>Check Employee Shift History:</p>
+        <label for="emplIDHours">Employee ID:</label>
+        <input type="text" id="emplIDHours">
+        <button type="button" onclick="getHoursWorked();">Get Value Owed</button>
     </div>
 </body>
 </div>
+
+<script>
+    String.prototype.hashCode = function () { 
+        var hash = 0;
+        if (this.length == 0) return hash;
+        for (i = 0; i < this.length; i++) {
+            char = this.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash = hash & hash; // Convert to 32bit integer
+        }
+        return hash;
+    }
+    // hash function I pulled from the URL below
+    //https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
+
+    function getValueOwed() {
+        // Selecting the input element and get its value 
+        let inputVal = (document.getElementById("custIDOwed").value.hashCode());
+        inputVal = inputVal / 10000;
+        // Displaying the value, removing decimals, adding 2 decimals, and taking the absolute value
+        //alert("$" + Math.abs(parseInt(inputVal) / 100));
+        
+        document.getElementById("owedOut").innerHTML = ("$" + Math.abs(parseInt(inputVal) / 100));
+    }
+    
+    function getHoursWorked() {
+
+    }
+
+</script>
 
 </html>
