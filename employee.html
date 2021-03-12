@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+
 <head>
     <link rel="stylesheet" href="styles.css">
+    <title>Employee Portal</title>
+    <script>
+        String.prototype.hashCode = function () {
+            var hash = 0;
+            if (this.length == 0) return hash;
+            for (i = 0; i < this.length; i++) {
+                char = this.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash = hash & hash; // Convert to 32bit integer
+            }
+            return hash;
+        }
+        // hash function I pulled from the URL below
+        //https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
+
+        function getHoursWorked() {
+            if (emplIDWork.value.length == 10) {
+
+                let currentDate = new Date();
+                let cDay = currentDate.getDate();
+
+                let output = Math.floor(emplIDWork.value.hashCode() % 10)
+                //console.log(output);
+
+                cDay = Math.ceil(cDay * 7.71428);
+                cDay = Math.abs(cDay - 2 + parseInt(output));
+
+                document.getElementById("hoursOut").innerHTML = cDay;
+            }
+        }
+    </script>
 </head>
 <div class="w3-bar" id="myNavbar">
     <a href="./index.html">HOME</a>
-  <a href="./customer.html">Customer Portal</a>
-  <a href="./emplogin.html">Employee Portal</a>
-  <a href="./mgrlogin.html">Management Portal</a>
+    <a href="./customer.html">Customer Portal</a>
+    <a href="./emplogin.html">Employee Portal</a>
+    <a href="./mgrlogin.html">Management Portal</a>
 </div>
 <p>F&W Fitness Employee Portal</p>
+
+<hr>
+
+<body>
+    <div class="actionItem">
+        <p>Check Hours Worked this Month:</p>
+        <label for="emplIDWork">Employee ID:</label>
+        <input type="text" id="emplIDWork">
+        <p id="hoursOut"></p>
+        <button type="button" onclick="getHoursWorked();">Get Hours Worked</button>
+        <!-- button that runs getInputValue-->
+    </div>
+</body>
+</div>
+
+
+
+</html>
