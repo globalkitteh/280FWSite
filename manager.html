@@ -28,10 +28,10 @@
             document.getElementById("owedOut").innerHTML = ("$" + Math.abs(parseInt(inputVal) / 100));
         }
 
-        function getHoursWorked() {
-            console.log(emplIDHours.value.length);
-            if (emplIDHours.value.length == 10) {
-                document.getElementById("hoursOut").innerHTML = "<table align='center' border='1'> <tr> <td>Monday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Tuesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Wednesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Thursday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Friday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Saturday:</td> <td>0900am</td> <td>0300pm</td> </tr> <tr> <td>Sunday:</td> <td>1200pm</td> <td>0500pm</td> </tr> </table>";
+        function getShiftsWorked() {
+            //console.log(emplIDShifts.value.length);
+            if (emplIDShifts.value.length == 10) {
+                document.getElementById("shiftsOut").innerHTML = "<table align='center' border='1'> <tr> <td>Monday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Tuesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Wednesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Thursday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Friday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Saturday:</td> <td>0900am</td> <td>0300pm</td> </tr> <tr> <td>Sunday:</td> <td>1200pm</td> <td>0500pm</td> </tr> </table>";
             }
         }
 
@@ -57,14 +57,14 @@
     <hr>
     <div class="actionItem">
         <p>Check Employee Shift History:</p>
-        <label for="emplIDHours">Employee ID:</label>
-        <input type="text" id="emplIDHours">
-        <p id="hoursOut">
+        <label for="emplIDShifts">Employee ID:</label>
+        <input type="text" id="emplIDShifts">
+        <p id="shiftsOut">
             <tr>
                 <td></td>
             </tr>
         </p>
-        <button type="button" onclick="getHoursWorked();">Get Hours Worked</button>
+        <button type="button" onclick="getShiftsWorked();">Get Hours Worked</button>
     </div>
 </body>
 </div>

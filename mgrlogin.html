@@ -7,18 +7,18 @@
     <script>
         function login() {
             // Grabbing the username and password and verifying
-            let inputUser = (document.getElementById("username").value);
+            let inputUser = (document.getElementById("mgrID").value);
             let inputPass = (document.getElementById("password").value);
 
             //let output = Object.values(inputPass);
             //console.log(output);
             //console.log("user is " + inputUser + " and pass is " + inputPass);
 
-            if (inputUser.length == 5 && inputPass.charAt(0) == 'a'){
+            if (inputUser.length == 10 && inputPass.charAt(0) == 'a'){
                 window.location.href="./manager.html";
             }
             else {
-                document.getElementById("msg").innerHTML = "Incorrect username or password.";
+                document.getElementById("msg").innerHTML = "Incorrect ID or password.";
             }
         }
     </script>
@@ -35,8 +35,8 @@
 
 <body>
     <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username"><br><br>
+        <label for="mgrID">Manager ID:</label>
+        <input type="text" id="mgrID"><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password"><br><br>
         <button type="button" onclick="login();">Login</button>
