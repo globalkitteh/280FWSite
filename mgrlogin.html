@@ -3,6 +3,25 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
+    <title>Manager Portal Login</title>
+    <script>
+        function login() {
+            // Grabbing the username and password and verifying
+            let inputUser = (document.getElementById("username").value);
+            let inputPass = (document.getElementById("password").value);
+
+            //let output = Object.values(inputPass);
+            //console.log(output);
+            //console.log("user is " + inputUser + " and pass is " + inputPass);
+
+            if (inputUser.length == 5 && inputPass.charAt(0) == 'a'){
+                window.location.href="./manager.html";
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Incorrect username or password.";
+            }
+        }
+    </script>
 </head>
 <div class="w3-bar" id="myNavbar">
     <a href="./index.html">HOME</a>
@@ -22,46 +41,7 @@
         <input type="password" id="password"><br><br>
         <button type="button" onclick="login();">Login</button>
     </form>
-
     <p id="msg"></p>
-    
-    <br>
-    
-    <br>
-    <!--<button type="button" onclick="getInputValue();">Login</button> button that runs getInputValue-->
-    <script>
-        function login() {
-            // Grabbing the username and password and verifying
-            let inputUser = (document.getElementById("username").value);
-            let inputPass = (document.getElementById("password").value);
-
-            //let output = Object.values(inputPass);
-            //console.log(output);
-            //console.log("user is " + inputUser + " and pass is " + inputPass);
-
-            if (inputUser.length == 5 && inputPass.charAt(0) == 'a'){
-                
-                window.location.href="./manager.html";
-            }
-            else {
-            
-                document.getElementById("msg").innerHTML = "Incorrect username or password.";
-
-            }
-        }
-
-        function getInputValue() {
-            // Selecting the input element and get its value 
-            let inputVal = (document.getElementById("inputId").value.hashCode());
-            inputVal = inputVal / 10000;
-            // Displaying the value, removing decimals, adding 2 decimals, and taking the absolute value
-            alert("$" + Math.abs(parseInt(inputVal) / 100));
-
-            //todo: redirect to manager.html
-        }
-    </script>
 </body>
-
 </div>
-
 </html>

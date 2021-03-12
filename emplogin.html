@@ -3,6 +3,25 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
+    <title>Employee Portal Login</title>
+    <script>
+        function login() {
+            // Grabbing the username and password and verifying
+            let inputUser = (document.getElementById("username").value);
+            let inputPass = (document.getElementById("password").value);
+
+            //let output = Object.values(inputPass);
+            //console.log(output);
+            //console.log("user is " + inputUser + " and pass is " + inputPass);
+
+            if (inputUser.length == 5 && inputPass.charAt(0) == 'a'){
+                window.location.href="./employee.html";
+            }
+            else {
+                document.getElementById("msg").innerHTML = "Incorrect username or password.";
+            }
+        }
+    </script>
 </head>
 <div class="w3-bar" id="myNavbar">
     <a href="./index.html">HOME</a>
@@ -11,3 +30,18 @@
   <a href="./mgrlogin.html">Management Portal</a>
 </div>
 <p>F&W Fitness Employee Portal Login</p>
+
+<hr>
+
+<body>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password"><br><br>
+        <button type="button" onclick="login();">Login</button>
+    </form>
+    <p id="msg"></p>
+</body>
+</div>
+</html>
