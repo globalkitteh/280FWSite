@@ -1,26 +1,13 @@
 <!DOCTYPE html>
+<meta charset="UTF-8">
 <html>
 
 <head>
     <link rel="stylesheet" href="styles.css">
-</head>
-<div class="w3-bar" id="myNavbar">
-    <a href="./index.html">HOME</a>
-    <!--<a href="#about"> ABOUT</a>-->
-    <a href="./customer.html">Customer Portal</a>
-    <a href="./mgrlogin.html">Management Portal</a>
-</div>
-<p>F&W Fitness Management Portal</p>
 
-<hr>
+    <title>F&W Manager Portal</title>
 
-<p>Insert Customer ID:</p>
-
-<body>
-    <input type="text" placeholder="Type " id="inputId">
-    <button type="button" onclick="getInputValue();">Get Value Owed</button> <!-- button that runs getInputValue-->
     <script>
-
         String.prototype.hashCode = function () { // hash function I pulled from the URL below
             var hash = 0;
             if (this.length == 0) return hash;
@@ -42,8 +29,25 @@
             alert("$" + Math.abs(parseInt(inputVal) / 100));
         }
     </script>
-</body>
+</head>
+<div class="w3-bar" id="myNavbar">
+    <a href="./index.html">HOME</a>
+    <!--<a href="#about">ABOUT</a>-->
+    <a href="./customer.html">Customer Portal</a>
+    <a href="./mgrlogin.html">Management Portal</a>
+</div>
+<p>F&W Fitness Management Portal</p>
+<hr>
 
+<body>
+    <div class="actionItem">
+        <p>Check Customer Outstanding Balance:</p>
+        <label for="inputOwed">Customer ID:</label>
+        <input type="text" id="inputOwed">
+        <button type="button" onclick="getInputValue();">Get Value Owed</button> <!-- button that runs getInputValue-->
+        
+    </div>
+</body>
 </div>
 
 </html>

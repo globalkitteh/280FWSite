@@ -246,3 +246,11 @@ footer p {
   text-align: center;
   color: #aaa;
 }
+
+.actionItem {
+            
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
