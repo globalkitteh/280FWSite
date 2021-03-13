@@ -34,6 +34,12 @@
                 document.getElementById("shiftsOut").innerHTML = "<table align='center' border='1'> <tr> <td>Monday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Tuesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Wednesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Thursday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Friday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Saturday:</td> <td>0900am</td> <td>0300pm</td> </tr> <tr> <td>Sunday:</td> <td>1200pm</td> <td>0500pm</td> </tr> </table>";
             }
         }
+        function getCustomerHistory() {
+         // Random strings trigger even more random results.
+            if(MemberStatus.value.length == 10 {
+               document.getElementById("ActivityStatus").innerHTML = "<table align='center' border='2'> <tr> <td>Monday 03/01/21: </td> <td>Present</td> </tr> <tr> Tuesday 03/02/21</td> <td>Not Present</td> </tr> </table>";
+            
+        }
 
     </script>
 </head>
@@ -67,14 +73,19 @@
         <button type="button" onclick="getShiftsWorked();">Get Hours Worked</button>
     </div>
     
-    // Req ID 901 - Searching for member inactivity as a Manager.
+    <!-- Req ID 901 - Searching for member inactivity as a Manager-->
     <div class="actionItem">
         
 <p> Check Member Status </p>
 <label for="MemberStatus">CustomerID:</label>
 <input type="text" id="MemberStatus">
-<div id="ActivityStatus"> </div>
-
+<p id="ActivityStatus"> 
+<tr>
+    <td></td>
+    <!-- Calls the button function as horribly coded above--> 
+    </tr>
+        </p>
+        <button type="button" onclick="getCustomerHistory();">Customer Attendance</button>
    </div>
 
 </body>
