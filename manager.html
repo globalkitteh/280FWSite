@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+
 <head>
     <link rel="stylesheet" href="styles.css">
     <title>F&W Manager Portal</title>
@@ -35,24 +36,25 @@
             }
         }
         function getCustomerHistory() {
-         // Random strings trigger even more random results.
-            if(MemberStatus.value.length == 10) {
-               document.getElementById("ActivityStatus").innerHTML = "<table align='center' border='2'> <tr> <td>Monday 03/01/21: </td> <td>Present</td> </tr> <tr> Tuesday 03/02/21</td> <td>Not Present</td> </tr> </table>";
-            
+            // Random strings trigger even more random results.
+            if (MemberStatus.value.length == 10) {
+                document.getElementById("ActivityStatus").innerHTML = "<table align='center' border='2'> <tr> <td>Monday 03/01/21: </td> <td>Present</td> </tr> <tr> Tuesday 03/02/21</td> <td>Not Present</td> </tr> </table>";
+
             }
         }
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
     <a href="./index.html">HOME</a>
-  <a href="./customer.html">Customer Portal</a>
-  <a href="./emplogin.html">Employee Portal</a>
-  <a href="./mgrlogin.html">Management Portal</a>
+    <a href="./customer.html">Customer Portal</a>
+    <a href="./emplogin.html">Employee Portal</a>
+    <a href="./mgrlogin.html">Management Portal</a>
 </div>
 <p>F&W Fitness Management Portal</p>
 <hr>
 
 <body>
+    <!-- Req ID 102 - Manager viewing sum owed by a club member -->
     <div class="actionItem">
         <p>Check Customer Outstanding Balance:</p>
         <label for="custIDOwed">Customer ID:</label>
@@ -61,6 +63,7 @@
         <button type="button" onclick="getValueOwed();">Get Value Owed</button> <!-- button that runs getInputValue-->
     </div>
     <hr>
+    <!-- Req ID 701 - Seeing when employees begin and end shifts -->
     <div class="actionItem">
         <p>Check Employee Shift History:</p>
         <label for="emplIDShifts">Employee ID:</label>
@@ -72,21 +75,20 @@
         </p>
         <button type="button" onclick="getShiftsWorked();">Get Hours Worked</button>
     </div>
-    
+    <hr>
     <!-- Req ID 901 - Searching for member inactivity as a Manager-->
     <div class="actionItem">
-        
-<p> Check Member Status </p>
-<label for="MemberStatus">CustomerID:</label>
-<input type="text" id="MemberStatus">
-<p id="ActivityStatus"> 
-<tr>
-    <td></td>
-    <!-- Calls the button function as horribly coded above--> 
-    </tr>
+        <p> Check Member Status </p>
+        <label for="MemberStatus">CustomerID:</label>
+        <input type="text" id="MemberStatus">
+        <p id="ActivityStatus">
+            <tr>
+                <td></td>
+                <!-- Calls the button function as horribly coded above-->
+            </tr>
         </p>
         <button type="button" onclick="getCustomerHistory();">Customer Attendance</button>
-   </div>
+    </div>
 
 </body>
 </div>
