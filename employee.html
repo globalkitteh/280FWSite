@@ -50,6 +50,23 @@
                 document.getElementById("vacationOut").innerHTML = cDay;
             }
         }
+
+        function getSalary() {
+            if (emplIDSalary.value.length == 10) {
+
+                let currentDate = new Date();
+                let cDay = currentDate.getDate();
+
+                let output = Math.floor(emplIDSalary.value.hashCode() % 10)
+                //console.log(output);
+
+                cDay = Math.ceil(cDay);
+                cDay = Math.abs(cDay - 2 + parseInt(output));
+
+                document.getElementById("salaryOut").innerHTML = cDay + " dollars/hour";
+            }
+        }
+
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -83,6 +100,19 @@
         <button type="button" onclick="getVacationDays();">Get Vacation Days</button>
         <!-- button that runs getInputValue-->
     </div>
+
+    <hr>
+
+    <div class="actionItem">
+        <!-- REQ ID 403 - Get Salary -->
+        <p>Check Salary:</p>
+        <label for="emplIDSalary">Employee ID:</label>
+        <input type="text" id="emplIDSalary">
+        <p id="salaryOut"></p>
+        <button type="button" onclick="getSalary();">Get Salary</button>
+        <!-- button that runs getInputValue-->
+    </div>
+
 </body>
 </div>
 
