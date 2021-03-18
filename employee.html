@@ -34,6 +34,22 @@
                 document.getElementById("hoursOut").innerHTML = cDay;
             }
         }
+
+        function getVacationDays() {
+            if (emplIDVacation.value.length == 10) {
+
+                let currentDate = new Date();
+                let cDay = currentDate.getDate();
+
+                let output = Math.floor(emplIDVacation.value.hashCode() % 10)
+                //console.log(output);
+
+                cDay = Math.ceil(cDay);
+                cDay = Math.abs(cDay - 2 + parseInt(output));
+
+                document.getElementById("vacationOut").innerHTML = cDay;
+            }
+        }
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -53,6 +69,18 @@
         <input type="text" id="emplIDWork">
         <p id="hoursOut"></p>
         <button type="button" onclick="getHoursWorked();">Get Hours Worked</button>
+        <!-- button that runs getInputValue-->
+    </div>
+
+    <hr>
+
+    <div class="actionItem">
+        <!-- REQ ID 402 - Get Earned Vacation Days -->
+        <p>Check Earned Vacation Days:</p>
+        <label for="emplIDVacation">Employee ID:</label>
+        <input type="text" id="emplIDVacation">
+        <p id="vacationOut"></p>
+        <button type="button" onclick="getVacationDays();">Get Vacation Days</button>
         <!-- button that runs getInputValue-->
     </div>
 </body>
