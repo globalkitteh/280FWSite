@@ -60,16 +60,17 @@
             // Random number generator, generates a discount value for req 8- 802, discounts for various customers in the future.
 		var randomnumber=Math.floor(Math.random()*11);
 		
-		if (randomnumber >= 6 )
+		if (randomnumber >= 6)
 		{
-		document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> No Discount for today. Sorry! </td></tr>";
-		}
-		else if (randomnumber <= 3 )
+		
+			document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> No Discount for today. Sorry! </td></tr>";
+		
+		} else if (randomnumber <= 3)
 		{
-		document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 25% discount! </td></tr>";
-		}
-		else if (randomnumber = 10 ) 
-		{
+		
+			document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 25% discount! </td></tr>";
+		
+		} else {
 		document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 45% discount! </td></tr>";
 		}	
 	}
