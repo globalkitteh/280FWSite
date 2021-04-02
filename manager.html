@@ -57,6 +57,7 @@
             }
         }
         function Discounts() {
+
             // Random number generator, generates a discount value for req 8- 802, discounts for various customers in the future.
             var randomnumber = Math.floor(Math.random() * 11);
 
@@ -71,7 +72,14 @@
             } else {
                 document.getElementById("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 45% discount! </td></tr>";
             }
+
+
         }
+
+        function paymentHistory() {
+            document.getElementById("pymHist").innerHTML = "<table align='center' border='1'> <tr> <td>Account Status:</td> <td>Good</td> </tr> <tr> <td>2021</td> </tr> <tr> <td>JAN</td> <td>Paid in Full</td> </tr> <tr> <td>FEB</td> <td>Paid in Full</td> </tr> <tr> <td>MAR</td> <td>Paid in Full</td> </tr> <tr> <td>APR</td> <td>Outstanding Balance</td> </tr> <tr> <td>MAY</td> <td></td> </tr> <tr> <td>JUN</td> <td></td> </tr> <tr> <td>JUL</td> <td></td> </tr> <tr> <td>AUG</td> <td></td> </tr> <tr> <td>SEP</td> <td></td> </tr> <tr> <td>OCT</td> <td></td> </tr> <tr> <td>NOV</td> <td></td> </tr> <tr> <td>DEC</td> <td></td> </tr> </table>";
+        }
+
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -136,7 +144,7 @@
 
     <hr>
     <div class="actionItem">
-        <p> 'Up for Promotion' </p>
+        <p>Up for Promotion</p>
         <label for="empPerfRev">EmployeeID:</label>
         <input type="text" id="empPerfRev">
         <p id="RevOut">
@@ -163,6 +171,22 @@
         </p>
         <button type="button" onclick="Discounts();">Get Discount</button>
     </div>
+
+    <hr>
+
+    <div class="actionItem">
+        <p> Customer Payment History </p>
+        <label for="pymHistCID">Customer ID:</label>
+        <input type="text" id="pymHistCID">
+        <p id="pymHist">
+            <tr>
+
+                <td> </td>
+        </p>
+        <button type="button" onclick="paymentHistory();">Get Member Payment History</button>
+
+    </div>
+
 </body>
 </div>
 
