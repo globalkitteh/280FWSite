@@ -49,7 +49,7 @@
                 document.getElementById("CustomerInfo").innerHTML = "<table align='center' border='2'> <tr> <td>Name</td> <td>John </td> <td> Doe </td> </tr> <tr> <td> Phone </td> <td>312</td> <td> 613-6157 </td> </tr> <tr> <td>Join Date</td> <td>02/21/21</td> </tr> </table>";
             }
         }
-         function getPerfRev() {
+        function getPerfRev() {
             // Function for Req 8- 801, Viewing employee info to assess raises or promotions.
             if (empPerfRev.value.length == 10) { // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
                 //The left alignment is experimental to change the layout of the page.
@@ -58,22 +58,20 @@
         }
         function Discounts() {
             // Random number generator, generates a discount value for req 8- 802, discounts for various customers in the future.
-		var randomnumber=Math.floor(Math.random()*11);
-		
-		if (randomnumber >= 6)
-		{
-		
-			document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> No Discount for today. Sorry! </td></tr>";
-		
-		} else if (randomnumber <= 3)
-		{
-		
-			document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 25% discount! </td></tr>";
-		
-		} else {
-		document.getElementByID("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 45% discount! </td></tr>";
-		}	
-	}
+            var randomnumber = Math.floor(Math.random() * 11);
+
+            if (randomnumber >= 6) {
+
+                document.getElementById("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> No Discount for today. Sorry! </td></tr>";
+
+            } else if (randomnumber <= 3) {
+
+                document.getElementById("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 25% discount! </td></tr>";
+
+            } else {
+                document.getElementById("DisOut").innerHTML = "<table align='center' border ='2' <tr> <td> 45% discount! </td></tr>";
+            }
+        }
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -137,8 +135,8 @@
     </div>
 
     <hr>
-   <div class="actionItem">
-       <p> 'Up for Promotion' </p>
+    <div class="actionItem">
+        <p> 'Up for Promotion' </p>
         <label for="empPerfRev">EmployeeID:</label>
         <input type="text" id="empPerfRev">
         <p id="RevOut">
@@ -147,22 +145,24 @@
                 <!-- Calls the function -->
             </tr>
         </p>
-       <button type="button" onclick="getPerfRev();">Performance Review</button>
-    </div> 
+        <button type="button" onclick="getPerfRev();">Performance Review</button>
+    </div>
 
     <hr>
-   <div class="actionItem">
-       <p> Discounts </p>
-	<input type="text" id="null"> <!-- the functionality is set so that this textbox is a red herring, the result is randomly generated regardless of input --> 
-	
+    <div class="actionItem">
+        <p> Customer Discounts </p>
+        <label for="custDisc">Customer ID:</label>
+        <input type="text" id="custDisc">
+        <!-- the functionality is set so that this textbox is a red herring, the result is randomly generated regardless of input -->
+
         <p id="DisOut">
             <tr>
                 <td></td>
                 <!-- Calls the function -->
             </tr>
         </p>
-       <button type="button" onclick="Discounts();">Discount!</button>
-    </div> 
+        <button type="button" onclick="Discounts();">Get Discount</button>
+    </div>
 </body>
 </div>
 
