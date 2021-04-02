@@ -14,6 +14,13 @@
       document.getElementById("time").innerHTML = document.getElementById("dateTime").value;
     }
 
+    function updateCard() {
+      document.getElementById("cNOut").innerHTML = document.getElementById("cardNum").value;
+      document.getElementById("cEOut").innerHTML = document.getElementById("cardExp").value;
+      document.getElementById("cCOut").innerHTML = document.getElementById("cardCVV").value;
+      document.getElementById("cardSucc").innerHTML = "Update Successful.";
+    }
+
   </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -40,5 +47,34 @@
   </p>
   <button type="button" onclick="requestAppt()">Request Appointment</button>
   <hr>
-  
-</div>
+
+  <div class="actionItem">
+    <p>Update Credit Card</p>
+    <label for="cardNum">Card Number:</label>
+    <input type="text" id="cardNum">
+    <label for="cardExp">Expiration Date (MM-YY):</label>
+    <input type="text" id="cardExp">
+    <label for="cardCVV">CVV:</label>
+    <input type="text" id="cardCVV">
+    <p id="cardOut">
+      <p id="cardSucc"></p>
+      <table align='center' border ='2'>
+      <tr>
+        <td>Number:</td>
+        <td id=cNOut>0013584691</td>
+      </tr>
+      <tr>
+        <td>Expiry Date:</td>
+        <td id="cEOut">05/23</td>
+      </tr>
+      <tr>
+        <td>CVV:</td>
+        <td id="cCOut">574</td>
+      </tr>
+    </table>
+    </p>
+    <button type="button" onclick="updateCard()">Update Info</button>
+
+    <hr>
+
+  </div>
