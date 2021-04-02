@@ -79,7 +79,12 @@
         function paymentHistory() {
             document.getElementById("pymHist").innerHTML = "<table align='center' border='1'> <tr> <td>Account Status:</td> <td>Good</td> </tr> <tr> <td>2021</td> </tr> <tr> <td>JAN</td> <td>Paid in Full</td> </tr> <tr> <td>FEB</td> <td>Paid in Full</td> </tr> <tr> <td>MAR</td> <td>Paid in Full</td> </tr> <tr> <td>APR</td> <td>Outstanding Balance</td> </tr> <tr> <td>MAY</td> <td></td> </tr> <tr> <td>JUN</td> <td></td> </tr> <tr> <td>JUL</td> <td></td> </tr> <tr> <td>AUG</td> <td></td> </tr> <tr> <td>SEP</td> <td></td> </tr> <tr> <td>OCT</td> <td></td> </tr> <tr> <td>NOV</td> <td></td> </tr> <tr> <td>DEC</td> <td></td> </tr> </table>";
         }
-
+        // Req 502 - financial manager reminding customer to make payments.
+        function getPaymentCol() {
+            if (PayReq.value.length == 10) {
+                document.getElementByID("reqPay").innerHTML = "<table align='center border = '2' <tr> <td> Payment reminder sent! </td></tr>";
+            }
+        }
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -186,7 +191,21 @@
         <button type="button" onclick="paymentHistory();">Get Member Payment History</button>
 
     </div>
+    
+    <hr>
+    <!-- Request payment checks a customer ID that the finance manager supplies and sends them a reminder email to make a payment through the system. -->
+<div class="actionItem"> 
+        <p> Request Payment </p>
+        <label for="PayReq">CustomerID:</label>
+        <input type="text" id="PayReq">
+        <p id="reqPay">
+            <tr>
 
+                <td> </td>
+        </p>
+        <button type="button" onclick="getPaymentCol();">Send Email</button>
+
+    </div>
 </body>
 </div>
 
