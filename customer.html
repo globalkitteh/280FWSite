@@ -20,7 +20,9 @@
       document.getElementById("cCOut").innerHTML = document.getElementById("cardCVV").value;
       document.getElementById("cardSucc").innerHTML = "Update Successful.";
     }
-
+  function PayDues() { // javascript comments be strange when html do the whole arrow thingy. Simple button calls the statement.
+    document.getElementById("DuesOut").innerHTML = "Dues Paid. Thank you!";
+  }
   </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -76,5 +78,14 @@
     <button type="button" onclick="updateCard()">Update Info</button>
 
     <hr>
-
+<div class="actionItem">
+  <p>Pay Dues</p>
+  <label for="CustomerID">CustomerID:</label>
+  <input type="text" id="CustomerID">
+  <p id="DuesOut">
+  
+  </p>
+  <button type="button" onclick="PayDues();">Pay Dues</button>
   </div>
+  
+  <hr>
