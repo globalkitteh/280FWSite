@@ -67,6 +67,15 @@
             }
         }
 
+        function viewAppts() {
+            // Function for Req 10- 1002, trainer can view and approve appointment requests
+            document.getElementById("apptsOut").innerHTML = "<table align='center' border='3'> <tr> <td> Name</td> <td> DateTime</td> <td></td> </tr> <tr> <td> John Oppenheimer </td> <td> 15-APR-2021|1730 </td> <td id='approve'> <button type='button' onclick='approveReq()''>Approve</button> </td> </tr>";
+        }
+
+        function approveReq() {
+            document.getElementById("approve").innerHTML = "✓";
+        }
+
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -110,6 +119,16 @@
         <input type="text" id="emplIDSalary">
         <p id="salaryOut"></p>
         <button type="button" onclick="getSalary();">Get Salary</button>
+        <!-- button that runs getInputValue-->
+    </div>
+
+    <hr>
+
+    <div class="actionItem">
+        <!-- REQ ID 1002 - View and approve appointment requests -->
+        <p>View and Approve Appointment Requests:</p>
+        <p id="apptsOut"></p>
+        <button type="button" onclick="viewAppts()">View Appointments</button>
         <!-- button that runs getInputValue-->
     </div>
 
