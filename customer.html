@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <html>
+
 <head>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function requestAppt() {
+      // Function for Req 10- 1001, customer requestion individual appointments with a trainer
+      // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
+      //The left alignment is experimental to change the layout of the page.
+      document.getElementById("ReqOut").innerHTML = "<table align='center' border='3'> <tr> <td> Name:</td> <td id='name'> </td> </tr> <tr> <td> Time: </td> <td id='time'></td> </tr><p>Appointment Created</p>";
+      document.getElementById("name").innerHTML = document.getElementById("trainerName").value;
+      document.getElementById("time").innerHTML = document.getElementById("dateTime").value;
+    }
+
+  </script>
 </head>
 <div class="w3-bar" id="myNavbar">
-    <a href="./index.html">HOME</a>
-  <a href="./customer.html">Customer Portal</a>
+  <a href="./index.html">HOME</a>
+  <a href="./custlogin.html">Customer Portal</a>
   <a href="./emplogin.html">Employee Portal</a>
   <a href="./mgrlogin.html">Management Portal</a>
 </div>
 <p>F&W Fitness Customer Portal</p>
+
+<hr>
+<div class="actionItem">
+  <p>Request a Trainer Appointment</p>
+  <label for="trainerName">Trainer Name:</label>
+  <input type="text" id="trainerName">
+
+  <label for="dateTime">DD-MM-YYYY-HHmm:</label>
+  <input type="text" id="dateTime">
+  <p id="ReqOut">
+    <tr>
+      <td></td>
+      <!-- Calls the function -->
+    </tr>
+  </p>
+  <button type="button" onclick="requestAppt()">Request Appointment</button>
+  <hr>
+  
+</div>

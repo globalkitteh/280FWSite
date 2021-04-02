@@ -3,11 +3,11 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-    <title>Employee Portal Login</title>
+    <title>Customer Portal Login</title>
     <script>
         function login() {
             // Grabbing the username and password and verifying
-            let inputUser = (document.getElementById("employeeID").value);
+            let inputUser = (document.getElementById("cstID").value);
             let inputPass = (document.getElementById("password").value);
 
             //let output = Object.values(inputPass);
@@ -15,10 +15,10 @@
             //console.log("user is " + inputUser + " and pass is " + inputPass);
 
             if (inputUser.length == 10 && inputPass.charAt(0) == 'a'){
-                window.location.href="./employee.html";
+                window.location.href="./customer.html";
             }
             else {
-                document.getElementById("msg").innerHTML = "Incorrect employee ID or password.";
+                document.getElementById("msg").innerHTML = "Incorrect ID or password.";
             }
         }
     </script>
@@ -29,14 +29,14 @@
   <a href="./emplogin.html">Employee Portal</a>
   <a href="./mgrlogin.html">Management Portal</a>
 </div>
-<p>F&W Fitness Employee Portal Login</p>
+<p>F&W Fitness Customer Portal Login</p>
 
 <hr>
 
 <body>
     <form>
-        <label for="employeeID">Employee ID:</label>
-        <input type="text" id="employeeID"><br><br>
+        <label for="cstID">Customer ID:</label>
+        <input type="text" id="cstID"><br><br>
         <label for="password">Password:</label>
         <input type="password" id="password"><br><br>
         <button type="button" onclick="login();">Login</button>
