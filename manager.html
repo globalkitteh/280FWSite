@@ -35,6 +35,7 @@
                 document.getElementById("shiftsOut").innerHTML = "<table align='center' border='1'> <tr> <td>Monday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Tuesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Wednesday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Thursday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Friday:</td> <td>0900am</td> <td>0500pm</td> </tr> <tr> <td>Saturday:</td> <td>0900am</td> <td>0300pm</td> </tr> <tr> <td>Sunday:</td> <td>1200pm</td> <td>0500pm</td> </tr> </table>";
             }
         }
+
         function getCustomerHistory() {
             // Random strings trigger even more random results.
             if (MemberStatus.value.length == 10) {
@@ -42,6 +43,7 @@
 
             }
         }
+
         function getCustReport() {
             // Function for Req 9- 902, demographic/customer info for marketing personnel. 
             if (CustomerID.value.length == 10) { // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
@@ -49,6 +51,7 @@
                 document.getElementById("CustomerInfo").innerHTML = "<table align='center' border='2'> <tr> <td>Name</td> <td>John </td> <td> Doe </td> </tr> <tr> <td> Phone </td> <td>312</td> <td> 613-6157 </td> </tr> <tr> <td>Join Date</td> <td>02/21/21</td> </tr> </table>";
             }
         }
+
         function getPerfRev() {
             // Function for Req 8- 801, Viewing employee info to assess raises or promotions.
             if (empPerfRev.value.length == 10) { // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
@@ -56,6 +59,7 @@
                 document.getElementById("RevOut").innerHTML = "<table align='center' border ='3' <tr> <td> Name:</td> <td> George </td> <td> Washington </td> </tr> <tr> <td> Points: </td> <td>+12</td> <td> 31</td> </tr> <tr> <td> 1-Promotion or 2-Raise </td> <td>No</td> <td>Yes</td></tr>";
             }
         }
+
         function Discounts() {
 
             // Random number generator, generates a discount value for req 8- 802, discounts for various customers in the future.
@@ -79,12 +83,14 @@
         function paymentHistory() {
             document.getElementById("pymHist").innerHTML = "<table align='center' border='1'> <tr> <td>Account Status:</td> <td>Good</td> </tr> <tr> <td>2021</td> </tr> <tr> <td>JAN</td> <td>Paid in Full</td> </tr> <tr> <td>FEB</td> <td>Paid in Full</td> </tr> <tr> <td>MAR</td> <td>Paid in Full</td> </tr> <tr> <td>APR</td> <td>Outstanding Balance</td> </tr> <tr> <td>MAY</td> <td></td> </tr> <tr> <td>JUN</td> <td></td> </tr> <tr> <td>JUL</td> <td></td> </tr> <tr> <td>AUG</td> <td></td> </tr> <tr> <td>SEP</td> <td></td> </tr> <tr> <td>OCT</td> <td></td> </tr> <tr> <td>NOV</td> <td></td> </tr> <tr> <td>DEC</td> <td></td> </tr> </table>";
         }
+
         // Req 502 - financial manager reminding customer to make payments.
         function getPaymentCol() {
             if (PayReq.value.length == 10) {
-        document.getElementById("reqPay").innerHTML = "<table align='center' border= '2'> <tr> <td> Payment reminder sent! </td></tr> </table>";
+                document.getElementById("reqPay").innerHTML = "<table align='center' border= '2'> <tr> <td> Payment reminder sent! </td></tr> </table>";
             }
         }
+
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -191,10 +197,10 @@
         <button type="button" onclick="paymentHistory();">Get Member Payment History</button>
 
     </div>
-    
+
     <hr>
     <!-- Request payment checks a customer ID that the finance manager supplies and sends them a reminder email to make a payment through the system. -->
-<div class="actionItem"> 
+    <div class="actionItem">
         <p> Request Payment </p>
         <label for="PayReq">CustomerID:</label>
         <input type="text" id="PayReq">
