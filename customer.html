@@ -50,7 +50,7 @@
   <label for="trainerName">Trainer Name:</label>
   <input type="text" id="trainerName">
 
-  <label for="dateTime">DD-MM-YYYY-HHmm:</label>
+  <label for="dateTime">DD-MON-YYYY-HHmm:</label>
   <input type="text" id="dateTime">
   <p id="ReqOut">
     <tr>
@@ -59,52 +59,56 @@
     </tr>
   </p>
   <button type="button" onclick="requestAppt()">Request Appointment</button>
-  <hr>
+</div>
 
-  <div class="actionItem">
-    <p>Update Credit Card</p>
-    <label for="cardNum">Card Number:</label>
-    <input type="text" id="cardNum">
-    <label for="cardExp">Expiration Date (MM-YY):</label>
-    <input type="text" id="cardExp">
-    <label for="cardCVV">CVV:</label>
-    <input type="text" id="cardCVV">
-    <p id="cardOut">
-    <p id="cardSucc"></p>
-    <table align='center' border='2'>
-      <tr>
-        <td>Number:</td>
-        <td id=cNOut>0013584691</td>
-      </tr>
-      <tr>
-        <td>Expiry Date:</td>
-        <td id="cEOut">05/23</td>
-      </tr>
-      <tr>
-        <td>CVV:</td>
-        <td id="cCOut">574</td>
-      </tr>
-    </table>
-    </p>
-    <button type="button" onclick="updateCard()">Update Info</button>
+<hr>
 
-    <hr>
-    <div class="actionItem">
-      <p>Pay Dues</p>
-      <label for="CustomerID">CustomerID:</label>
-      <input type="text" id="CustomerID">
-      <p id="DuesOut">
+<div class="actionItem">
+  <p>Update Credit Card</p>
+  <label for="cardNum">Card Number:</label>
+  <input type="text" id="cardNum">
+  <label for="cardExp">Expiration Date (MM-YY):</label>
+  <input type="text" id="cardExp">
+  <label for="cardCVV">CVV:</label>
+  <input type="text" id="cardCVV">
+  <p id="cardOut">
+  <p id="cardSucc"></p>
+  <table align='center' border='2'>
+    <tr>
+      <td>Number:</td>
+      <td id=cNOut>0013584691</td>
+    </tr>
+    <tr>
+      <td>Expiry Date:</td>
+      <td id="cEOut">05/23</td>
+    </tr>
+    <tr>
+      <td>CVV:</td>
+      <td id="cCOut">574</td>
+    </tr>
+  </table>
+  </p>
+  <button type="button" onclick="updateCard()">Update Info</button>
+</div>
+<hr>
+<div class="actionItem">
+  <p>Pay Dues</p>
+  <label for="CustomerID">CustomerID:</label>
+  <input type="text" id="CustomerID">
+  <p id="DuesOut">
 
-      </p>
-      <button type="button" onclick="PayDues();">Pay Dues</button>
-    </div>
+  </p>
+  <button type="button" onclick="PayDues();">Pay Dues</button>
+</div>
 
-    <hr>
+<hr>
 
-    <div class="actionItem">
-      <!-- REQ ID 601 - Customer signs up for training programs -->
-      <p>View and Sign Up for Training Programs</p>
-      <p id="trainPrgmsOut"></p>
-      <button type="button" onclick="viewTrainPrgms()">View Programs</button>
-      <!-- button that runs getInputValue-->
-    </div>
+<div class="actionItem">
+  <!-- REQ ID 601 - Customer signs up for training programs -->
+  <p>View and Sign Up for Training Programs</p>
+  <p id="trainPrgmsOut"></p>
+  <button type="button" onclick="viewTrainPrgms()">View Programs</button>
+  <!-- button that runs getInputValue-->
+</div>
+
+</html>

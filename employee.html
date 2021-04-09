@@ -81,6 +81,12 @@
             window.open("./Fiscal Report.pdf");
         }
 
+        function schedulePgm() {
+            document.getElementById("pgmOut").innerHTML = "Program Scheduled!";
+            document.getElementById("programName").value = "";
+            document.getElementById("programType").value = "";
+            document.getElementById("dateTime").value = "";
+        }
 
     </script>
 </head>
@@ -145,9 +151,28 @@
         <button type="button" onclick="getFRep();">Get Report</button>
         <!-- button that runs getFinRep-->
     </div>
+
+    <hr>
+
+    <div class="actionItem">
+        <p>Schedule a Program</p> <!-- REQ ID 602 -->
+        <label for="programName">Program Name:</label>
+        <input type="text" id="programName">
+
+        <label for="programType">Program Type:</label>
+        <input type="text" id="programType">
+
+        <label for="dateTime">DD-MON-YYYY-HHmm:</label>
+        <input type="text" id="dateTime">
+        <p id="pgmOut">
+            <tr>
+                <td></td>
+                <!-- Calls the function -->
+            </tr>
+        </p>
+        <button type="button" onclick="schedulePgm()">Schedule Program</button>
+    </div>
+
 </body>
-</div>
-
-
 
 </html>
