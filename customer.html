@@ -20,9 +20,19 @@
       document.getElementById("cCOut").innerHTML = document.getElementById("cardCVV").value;
       document.getElementById("cardSucc").innerHTML = "Update Successful.";
     }
-  function PayDues() { // javascript comments be strange when html do the whole arrow thingy. Simple button calls the statement.
-    document.getElementById("DuesOut").innerHTML = "Dues Paid. Thank you!";
-  }
+
+    function PayDues() { // javascript comments be strange when html do the whole arrow thingy. Simple button calls the statement.
+      document.getElementById("DuesOut").innerHTML = "Dues Paid. Thank you!";
+    }
+
+    function viewTrainPrgms() {
+      // Function for Req 6- 6001, Customer signs up for training programs
+      document.getElementById("trainPrgmsOut").innerHTML = "<table align='center' border='3'> <tr> <td> Trainer</td> <td> DateTime</td> <td> Program Name</td> <td> Program Type</td> <td></td> </tr> <tr> <td> Jingleheimer Schmitt </td> <td> 18-JUN-2021|1245 </td> <td> Jiggle Those Bellies </td> <td> Action Yoga XTREME </td> <td id='signUp'> <button type='button' onclick='approvePgm()''>Sign Up</button> </td> </tr>";
+    }
+
+    function approvePgm() {
+      document.getElementById("signUp").innerHTML = "✓";
+    }
   </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -59,8 +69,8 @@
     <label for="cardCVV">CVV:</label>
     <input type="text" id="cardCVV">
     <p id="cardOut">
-      <p id="cardSucc"></p>
-      <table align='center' border ='2'>
+    <p id="cardSucc"></p>
+    <table align='center' border='2'>
       <tr>
         <td>Number:</td>
         <td id=cNOut>0013584691</td>
@@ -78,14 +88,22 @@
     <button type="button" onclick="updateCard()">Update Info</button>
 
     <hr>
-<div class="actionItem">
-  <p>Pay Dues</p>
-  <label for="CustomerID">CustomerID:</label>
-  <input type="text" id="CustomerID">
-  <p id="DuesOut">
-  
-  </p>
-  <button type="button" onclick="PayDues();">Pay Dues</button>
-  </div>
-  
-  <hr>
+    <div class="actionItem">
+      <p>Pay Dues</p>
+      <label for="CustomerID">CustomerID:</label>
+      <input type="text" id="CustomerID">
+      <p id="DuesOut">
+
+      </p>
+      <button type="button" onclick="PayDues();">Pay Dues</button>
+    </div>
+
+    <hr>
+
+    <div class="actionItem">
+      <!-- REQ ID 601 - Customer signs up for training programs -->
+      <p>View and Sign Up for Training Programs</p>
+      <p id="trainPrgmsOut"></p>
+      <button type="button" onclick="viewTrainPrgms()">View Programs</button>
+      <!-- button that runs getInputValue-->
+    </div>
