@@ -38,9 +38,9 @@
     function CustInfoUpdt() {
       // values pulled from the input are loaded into the quasi-table one row at a time yo.
       // Implementation- I love logic rules in coding. When the statement used to load the open field with the blank data lol
-      document.getElementById("NameL").innerHTML = document.getElementById("CustName").value;
-         document.getElementById("PhoneL").innerHTML = document.getElementById("PhoneNum").value;
-         document.getElementById("ActiveL).innerHTML = document.getElementById("CustStatus").value;
+      document.getElementById("CustName").innerHTML = document.getElementById("NameL").value;
+         document.getElementById("PhoneNum").innerHTML = document.getElementById("PhoneL").value;
+         document.getElementById("CustStatus").innerHTML = document.getElementById("ActiveL").value;
          document.getElementById("infoOut").innerHTML = "Information Updated!";
     }
   </script>
@@ -139,7 +139,7 @@
   <table align='center' border='2'>
     <tr>
       <td>Name:</td>
-      <td id=NameL> </td>
+      <td id="NameL"> </td>
     </tr>
     <tr>
       <td>Phone #:</td>
