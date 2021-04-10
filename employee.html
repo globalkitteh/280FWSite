@@ -87,7 +87,12 @@
             document.getElementById("programType").value = "";
             document.getElementById("dateTime").value = "";
         }
-
+        function getCustInfo() {
+            // Function for Req 6- 602 Employee collecting customer info
+            if (CustIDFirEmp.value.length == 10) { // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
+                //The left alignment is experimental to change the layout of the page.
+                document.getElementById("CustomerInfo").innerHTML = "<table align='center' border='2'> <tr> <td>Name</td> <td>John </td> <td> Doe </td> </tr> <tr> <td> Phone </td> <td>312</td> <td> 613-6157 </td> </tr> <tr> <td>Join Date</td> <td>02/21/21</td> </tr> </table>";
+            }
     </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -171,6 +176,20 @@
             </tr>
         </p>
         <button type="button" onclick="schedulePgm()">Schedule Program</button>
+    </div>
+    
+    <hr>
+    <div class="actionItem"> <!--Req 602 Employee checking customer info-->
+        <p> Check Customer Information </p>
+        <label for="CustIDFirEmp">CustomerID:</label>
+        <input type="text" id="CustIDFirEmp">
+        <p id="CustomerInfo">
+            <tr>
+
+                <td> </td>
+        </p>
+        <button type="button" onclick="getCustInfo();">Member Information</button>
+
     </div>
 
 </body>
