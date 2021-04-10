@@ -34,6 +34,14 @@
     function approvePgm() {
       document.getElementById("signUp").innerHTML = "✓";
     }
+    
+    function CustInfoUpdt() {
+      // values pulled from the input are loaded into the quasi-table one row at a time yo.
+      document.getElementById("CustName").innerHTML = document.getElementById("NameL").value;
+         document.getElementById("PhoneNum").innerHTML = document.getElementById("PhoneL").value;
+         document.getElementById("CustStatus").innerHTML = document.getElementById("ActiveL").value;
+         document.getElementById("infoOut").innerHTML = "Information Updated!";
+    }
   </script>
 </head>
 <div class="w3-bar" id="myNavbar">
@@ -90,7 +98,9 @@
   </p>
   <button type="button" onclick="updateCard()">Update Info</button>
 </div>
+
 <hr>
+
 <div class="actionItem">
   <p>Pay Dues</p>
   <label for="CustomerID">CustomerID:</label>
@@ -109,6 +119,39 @@
   <p id="trainPrgmsOut"></p>
   <button type="button" onclick="viewTrainPrgms()">View Programs</button>
   <!-- button that runs getInputValue-->
+</div>
+
+<hr> 
+
+<div class="actionItem">
+  <!-- REQ ID 201 - Customer views or changes personal information -->
+  <p>Update User Profile</p>
+  <label for="CustName">Name:</label>
+  <input type="text" id="CustName">
+   <label for="PhoneNum">Phone Number (123-456-7890):</label>
+    <input type="text" id="PhoneNum">
+   <label for="CustStatus">Active:</label>
+    <input type="text" id="CustStatus">
+  
+    <p id="infoOut">
+  <p id="infoUptSucs"></p>
+  <table align='center' border='2'>
+    <tr>
+      <td>Name:</td>
+      <td id=NameL> </td>
+    </tr>
+    <tr>
+      <td>Phone #:</td>
+      <td id="PhoneL"> </td>
+    </tr>
+    <tr>
+      <td>Active:</td>
+      <td id="ActiveL"> </td>
+    </tr>
+  </table>
+  </p>  
+  <button type="button" onclick="CustInfoUpdt()">Update Info</button>
+  <!-- button that runs CustInfoUpdt- (redundant) at the bottom!-->
 </div>
 
 </html>
