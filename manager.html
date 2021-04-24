@@ -93,7 +93,7 @@
         function getNewMembers() {
             document.getElementById("NewSignUps").innerHTML = "<table align='center' border='2'> <tr> <td>Feb</td> <td>31</td> </tr> <tr> <td> Mar </td> <td>17</td> <tr> <td>Apr</td> <td>62</td> </tr> </table>";
         }
-        
+
 
     </script>
 </head>
@@ -115,7 +115,9 @@
         <div id="owedOut"></div>
         <button type="button" onclick="getValueOwed();">Get Value Owed</button> <!-- button that runs getInputValue-->
     </div>
+
     <hr>
+
     <!-- Req ID 701 - Seeing when employees begin and end shifts -->
     <div class="actionItem">
         <p>Check Employee Shift History:</p>
@@ -128,7 +130,9 @@
         </p>
         <button type="button" onclick="getShiftsWorked();">Get Hours Worked</button>
     </div>
+
     <hr>
+
     <!-- Req ID 901 - Searching for member inactivity as a Manager-->
     <div class="actionItem">
         <p> Check Member Status </p>
@@ -142,8 +146,10 @@
         </p>
         <button type="button" onclick="getCustomerHistory();">Customer Attendance</button>
     </div>
+
     <!-- Calls the function GetCustInfo -->
     <hr>
+
     <div class="actionItem">
         <p> Member Information </p>
         <label for="CustomerID">CustomerID:</label>
@@ -216,18 +222,38 @@
         <button type="button" onclick="getPaymentCol();">Send Email</button>
 
     </div>
+
+    <hr>
+
     <!-- Req 302- requesting a number of new members in this month. -->
-     <div class="actionItem">
-         <p> Check New Members This Month! </p>
-         <button type="button" onclick="getNewMembers();">Get New Members</button>
-         <p id="NewSignUps">
+    <div class="actionItem">
+        <p> Check New Members This Month! </p>
+        <button type="button" onclick="getNewMembers();">Get New Members</button>
+        <p id="NewSignUps">
             <tr>
 
                 <td> </td>
         </p>
-         
-         
+
     </div>
+
+    <hr>
+
+    <!-- Req 303 - compare country performance -->
+    <div class="actionItem">
+        <p> CEO Performance Check </p>
+        <button type="button" onclick="checkCouPerf();"> Get Country Performance Metrics</button>
+        <script> function checkCouPerf() {
+        document.getElementById("couPerfOut").innerHTML =  "<style type='text/css'> .tg {border-collapse:collapse;border-spacing:0;} .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; overflow:hidden;padding:10px 5px;word-break:normal;} .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;} .tg .tg-0lax{text-align:left;vertical-align:top} </style> <table class='tg' align='center' border='1'> <thead> <tr> <th class='tg-0lax'></th> <th class='tg-0lax'>Spain</th> <th class='tg-0lax'>Portugal</th> </tr> </thead> <tbody> <tr> <td class='tg-0lax'>Gross Revenue</td> <td class='tg-0lax'>$70,000.00</td> <td class='tg-0lax'>$50,000.00</td> </tr> <tr> <td class='tg-0lax'>Total Expenses</td> <td class='tg-0lax'>$65,000.00</td> <td class='tg-0lax'>$43,000.00</td> </tr> <tr> <td class='tg-0lax'>Net Income</td> <td class='tg-0lax'>$5,000.00</td> <td class='tg-0lax'>$7,000.00</td> </tr> <tr> <td class='tg-0lax'>Clubs</td> <td class='tg-0lax'>21<br></td> <td class='tg-0lax'>18</td> </tr> <tr> <td class='tg-0lax'>Members</td> <td class='tg-0lax'>82,030</td> <td class='tg-0lax'>60,152</td> </tr> <tr> <td class='tg-0lax'>Employees</td> <td class='tg-0lax'>764</td> <td class='tg-0lax'>595<br></td> </tr> </tbody> </table>";
+        }</script>
+        <p id="couPerfOut">
+            <tr>
+
+                <td> </td>
+        </p>
+
+    </div>
+
 </body>
 </div>
 
