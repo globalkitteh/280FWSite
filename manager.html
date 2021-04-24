@@ -244,9 +244,28 @@
         <p> CEO Performance Check </p>
         <button type="button" onclick="checkCouPerf();"> Get Country Performance Metrics</button>
         <script> function checkCouPerf() {
-        document.getElementById("couPerfOut").innerHTML =  "<style type='text/css'> .tg {border-collapse:collapse;border-spacing:0;} .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; overflow:hidden;padding:10px 5px;word-break:normal;} .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;} .tg .tg-0lax{text-align:left;vertical-align:top} </style> <table class='tg' align='center' border='1'> <thead> <tr> <th class='tg-0lax'></th> <th class='tg-0lax'>Spain</th> <th class='tg-0lax'>Portugal</th> </tr> </thead> <tbody> <tr> <td class='tg-0lax'>Gross Revenue</td> <td class='tg-0lax'>$70,000.00</td> <td class='tg-0lax'>$50,000.00</td> </tr> <tr> <td class='tg-0lax'>Total Expenses</td> <td class='tg-0lax'>$65,000.00</td> <td class='tg-0lax'>$43,000.00</td> </tr> <tr> <td class='tg-0lax'>Net Income</td> <td class='tg-0lax'>$5,000.00</td> <td class='tg-0lax'>$7,000.00</td> </tr> <tr> <td class='tg-0lax'>Clubs</td> <td class='tg-0lax'>21<br></td> <td class='tg-0lax'>18</td> </tr> <tr> <td class='tg-0lax'>Members</td> <td class='tg-0lax'>82,030</td> <td class='tg-0lax'>60,152</td> </tr> <tr> <td class='tg-0lax'>Employees</td> <td class='tg-0lax'>764</td> <td class='tg-0lax'>595<br></td> </tr> </tbody> </table>";
-        }</script>
+                document.getElementById("couPerfOut").innerHTML = "<style type='text/css'> .tg {border-collapse:collapse;border-spacing:0;} .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; overflow:hidden;padding:10px 5px;word-break:normal;} .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px; font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;} .tg .tg-0lax{text-align:left;vertical-align:top} </style> <table class='tg' align='center' border='1'> <thead> <tr> <th class='tg-0lax'></th> <th class='tg-0lax'>Spain</th> <th class='tg-0lax'>Portugal</th> </tr> </thead> <tbody> <tr> <td class='tg-0lax'>Gross Revenue</td> <td class='tg-0lax'>$70,000.00</td> <td class='tg-0lax'>$50,000.00</td> </tr> <tr> <td class='tg-0lax'>Total Expenses</td> <td class='tg-0lax'>$65,000.00</td> <td class='tg-0lax'>$43,000.00</td> </tr> <tr> <td class='tg-0lax'>Net Income</td> <td class='tg-0lax'>$5,000.00</td> <td class='tg-0lax'>$7,000.00</td> </tr> <tr> <td class='tg-0lax'>Clubs</td> <td class='tg-0lax'>21<br></td> <td class='tg-0lax'>18</td> </tr> <tr> <td class='tg-0lax'>Members</td> <td class='tg-0lax'>82,030</td> <td class='tg-0lax'>60,152</td> </tr> <tr> <td class='tg-0lax'>Employees</td> <td class='tg-0lax'>764</td> <td class='tg-0lax'>595<br></td> </tr> </tbody> </table>";
+            }</script>
         <p id="couPerfOut">
+            <tr>
+
+                <td> </td>
+        </p>
+
+    </div>
+
+    <hr>
+
+    <!-- Req 304 - list IT assets -->
+    <div class="actionItem">
+        <p> IT Asset List </p>
+        <label for="dummyClub">ClubID:</label>
+        <input type="text" id="dummyClub">
+        <button type="button" onclick="listAssets();"> Get list of IT Assets</button>
+        <script> function listAssets() {
+                document.getElementById("assetsOut").innerHTML = "<table align='center' border='2'> <thead> <tr> <th>Club:</th> <th>Wilkfordshire St, Portugal</th> </tr> </thead> <tbody> <tr> <td></td> <td></td> </tr> <tr> <td>Laptops:</td> <td>3<br></td> </tr> <tr> <td>Desktops:</td> <td>12</td> </tr> <tr> <td>Servers:</td> <td>2<br></td> </tr> </tbody> </table>";
+            }</script>
+        <p id="assetsOut">
             <tr>
 
                 <td> </td>
