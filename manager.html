@@ -100,6 +100,15 @@
         }
         }
         
+        function chkmanager() {
+            if (managerchk.value.length == 10) {
+                document.getElementById("message").value = "";
+                document.getElementById("managerchk").value = "";
+                document.getElementById("Messagesent").value = "Message Sent!";
+            }
+            
+        }
+        
 
     </script>
 </head>
@@ -293,7 +302,21 @@
         </p>
 
     </div>
-
+    <hr>
+    
+     <div class="actionItem">
+        <p> Send a Message </p>
+        <label for="managerchk">EmployeeID:</label>
+        <input type="text" id="managerchk">
+       
+        <label for="message">Enter message here:</label>
+        <input type="text" id="message">
+         <button type="button" onclick="chkmanager();">Send Message</button>
+        <p id="Messagesent">
+         
+         </p>
+    </div>
+    
 </body>
 </div>
 
