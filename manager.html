@@ -90,6 +90,10 @@
                 document.getElementById("reqPay").innerHTML = "<table align='center' border= '2'> <tr> <td> Payment reminder sent! </td></tr> </table>";
             }
         }
+        function getNewMembers() {
+            document.getElementById("NewSignUps").innerHTML = "<table align='center' border='2'> <tr> <td>Feb</td> <td>31</td> </tr> <tr> <td> Mar </td> <td>17</td> <tr> <td>Apr</td> <td>62</td> </tr> </table>";
+        }
+        
 
     </script>
 </head>
@@ -211,6 +215,18 @@
         </p>
         <button type="button" onclick="getPaymentCol();">Send Email</button>
 
+    </div>
+    <!-- Req 302- requesting a number of new members in this month. -->
+     <div class="actionItem">
+         <p> Check New Members This Month! </p>
+         <button type="button" onclick-'getNewMembers();'>Get New Members</button>
+         <p id="NewSignUps">
+            <tr>
+
+                <td> </td>
+        </p>
+         
+         
     </div>
 </body>
 </div>
