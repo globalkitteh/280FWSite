@@ -90,7 +90,7 @@
         function getCustInfo() {
             // Function for Req 6- 602 Employee collecting customer info
             if (CustIDFirEmp.value.length == 10) { // this table can be adjusted for any given info, plans in the future include randomizing user input per different ID's that are pulled. 
-     document.getElementById("CustomerInfo").innerHTML = "<table align='center' border='2'> <tr> <td>Name</td> <td>John </td> <td> Doe </td> </tr> <tr> <td> Phone </td> <td>312</td> <td> 613-6157 </td> </tr> <tr> <td>Join Date</td> <td>02/21/21</td> </tr> </table>";
+                document.getElementById("CustomerInfo").innerHTML = "<table align='center' border='2'> <tr> <td>Name</td> <td>John </td> <td> Doe </td> </tr> <tr> <td> Phone </td> <td>312</td> <td> 613-6157 </td> </tr> <tr> <td>Join Date</td> <td>02/21/21</td> </tr> <tr> <td>TOP?</td> <td id='topMem'> No </td> </tr> </table>";
             }
         }
     </script>
@@ -177,9 +177,11 @@
         </p>
         <button type="button" onclick="schedulePgm()">Schedule Program</button>
     </div>
-    
+
     <hr>
-    <div class="actionItem"> <!--Req 602 Employee checking customer info-->
+    <div class="actionItem">
+        <!--Req 602 Employee checking customer info -->
+        <!--Req 203 TOP Member info                 -->
         <p> Check Customer Information </p>
         <label for="CustIDFirEmp">CustomerID:</label>
         <input type="text" id="CustIDFirEmp">
@@ -189,9 +191,11 @@
                 <td> </td>
         </p>
         <button type="button" onclick="getCustInfo();">Member Information</button>
+        <script>function topscrip() { document.getElementById('topMem').innerHTML = 'Yes'; }</script>
+        <button type="button" onclick="topscrip()">Make TOP Member</button>
+
 
     </div>
-
 </body>
 
 </html>
